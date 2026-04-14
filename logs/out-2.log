@@ -1,0 +1,34 @@
+2026-04-14 17:50:07: === VLESS Proxy Startup ===
+2026-04-14 17:50:07: Port: 3001
+2026-04-14 17:50:07: UUID configured: true
+2026-04-14 17:50:07: ADMIN configured: true
+2026-04-14 17:50:07: ADMIN value: Imacuser01
+2026-04-14 17:50:07: PROXYIP configured: true
+2026-04-14 17:50:07: ==========================
+2026-04-14 17:50:07: 
+✅ VLESS Proxy Server running on port 3001
+2026-04-14 17:50:07: 
+📱 Access URLs:
+2026-04-14 17:50:07:    Homepage:   http://localhost:3001/
+2026-04-14 17:50:07:    Admin:      http://localhost:3001/admin
+2026-04-14 17:50:07:    Debug:      http://localhost:3001/debug
+2026-04-14 17:50:07:    Subscribe:  http://localhost:3001/sub
+2026-04-14 17:50:07: 
+🔐 Login with password: Imacuser01
+2026-04-14 17:50:07: 
+📝 Logs: pm2 logs vless-proxy
+
+2026-04-14 17:50:14: [HTTP] GET /debug
+2026-04-14 17:50:14: Socket closed
+2026-04-14 17:50:18: [HTTP] GET /api/vless/admin/login
+2026-04-14 17:50:18: [Login Attempt] Password: Imacuser01 Expected: Imacuser01
+2026-04-14 17:50:18: [Login] Success
+2026-04-14 17:50:18: Socket closed
+2026-04-14 17:50:18: [HTTP] GET /api/vless/admin
+2026-04-14 17:50:18: Socket closed
+2026-04-14 17:50:22: [HTTP] GET /sub
+2026-04-14 17:50:22: Socket closed
+2026-04-14 17:50:26: [HTTP] GET /sub
+2026-04-14 17:50:26: Socket closed
+2026-04-14 17:50:30: [HTTP] GET /MySecretKey2026
+2026-04-14 17:50:30: Socket closed

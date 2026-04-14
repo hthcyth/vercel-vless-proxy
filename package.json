@@ -1,0 +1,18 @@
+{
+  "name": "vless-vercel-proxy",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "VLESS Proxy for Vercel/Node.js",
+  "main": "api/vless.js",
+  "scripts": {
+    "start": "node api/vless.js",
+    "dev": "node --watch api/vless.js"
+  },
+  "dependencies": {
+    "ws": "^8.14.2",
+    "dotenv": "^16.3.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
