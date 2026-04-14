@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/vercel-edge.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/vercel-edge.js"
+    },
+    {
+      "src": "/admin",
+      "dest": "/api/vercel-edge.js"
+    },
+    {
+      "src": "/sub",
+      "dest": "/api/vercel-edge.js"
+    },
+    {
+      "src": "/debug",
+      "dest": "/api/vercel-edge.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/vercel-edge.js"
+    }
+  ],
+  "env": {
+    "UUID": "",
+    "PROXYIP": "",
+    "ADMIN": "",
+    "KEY": ""
+  }
+}
