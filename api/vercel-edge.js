@@ -1,5 +1,3 @@
-import { Buffer } from 'buffer';
-
 // --- CONFIGURATION (从环境变量读取) ---
 const userID = process.env.UUID || '';
 const proxyHost = process.env.PROXYIP?.split(':')[0] || '';
@@ -327,16 +325,7 @@ Test Login:
         });
     }
     
-    // 9. WebSocket Upgrade（Vercel 不支持 WebSocket）
-    const upgradeHeader = request.headers.get('upgrade')?.toLowerCase();
-    if (upgradeHeader === 'websocket') {
-        return new Response('WebSocket not supported on Vercel. Use standard Node.js deployment.', {
-            status: 503,
-            headers: SECURITY_HEADERS
-        });
-    }
-    
-    // 10. 404
+    // 9. 404
     return new Response('Not Found', {
         status: 404,
         headers: {
